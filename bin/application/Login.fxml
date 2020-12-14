@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ModelController">
+   <children>
+      <Label fx:id="loginLbl" layoutX="36.0" layoutY="20.0" prefHeight="17.0" prefWidth="224.0" textFill="#ee0000">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="300.0" layoutY="-1.0">
+         <image>
+            <Image url="@../../../../../Downloads/ad9c13d13e826926f71d8aab74b2bd5f.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="35.0" layoutY="190.0" mnemonicParsing="false" onAction="#Login" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="UserEmail" layoutX="38.0" layoutY="83.0" promptText="Email">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="UserPassword" layoutX="35.0" layoutY="144.0" promptText="Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="LoginRegister" layoutX="170.0" layoutY="190.0" mnemonicParsing="false" onAction="#loginRegisterButton" text="Register">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="forgotPassword" layoutX="69.0" layoutY="240.0" mnemonicParsing="false" onAction="#forgotPassword" text="Forgot Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

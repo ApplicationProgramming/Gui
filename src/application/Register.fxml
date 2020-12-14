@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ModelController">
+
+   <children>
+      <TextField fx:id="RegisterEmail" layoutX="311.0" layoutY="43.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="RegisterFirst" layoutX="22.0" layoutY="43.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="RegisterLast" layoutX="22.0" layoutY="99.0" prefHeight="30.0" prefWidth="175.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="RegisterSSN" layoutX="22.0" layoutY="166.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="RegisterAddress" layoutX="22.0" layoutY="225.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="RegisterCity" layoutX="22.0" layoutY="291.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="RegisterState" layoutX="22.0" layoutY="350.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="RegisterZip" layoutX="22.0" layoutY="414.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="RegisterPassword" layoutX="311.0" layoutY="99.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="CompleteRegister" layoutX="56.0" layoutY="507.0" mnemonicParsing="false" onAction="#RegisterButton" text="Register">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="returnButton" layoutX="346.0" layoutY="507.0" mnemonicParsing="false" onAction="#returnButton" text="Return">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Text layoutX="374.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="49.044921875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="361.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="RegisterSecurityQ" layoutX="311.0" layoutY="166.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Text layoutX="329.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Security Question">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="RegisterSecurityA" layoutX="311.0" layoutY="225.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Text layoutX="338.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Security Answer">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="88.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zip">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="86.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="51.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Street Address">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="17.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Social Security Number">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="67.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="67.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="81.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="State">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="311.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password must be 8 characters in length" wrappingWidth="175.0" />
+      <Text fill="#e41919" layoutX="22.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="462.2734375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Label fx:id="registerStatus" layoutX="22.0" layoutY="452.0" prefHeight="35.0" prefWidth="462.0" textFill="#f82525">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
