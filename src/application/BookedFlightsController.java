@@ -33,19 +33,13 @@ public class BookedFlightsController implements Initializable{
 			PreparedStatement pst = conn.prepareStatement("select * from BookedFlights");
 			ResultSet rs = pst.executeQuery();
 			
-			System.out.println("a");
 			
 			while(rs.next()){
 			String CustomerEmail = rs.getString("CustomerEmail");
-			System.out.println("a");
 			int flightID = rs.getInt("FlightID");
-			System.out.println("a");
 			String flightDate = rs.getString("FlightDate");
-			System.out.println("a");
 			String flightTime = rs.getString("FlightTime");
-			System.out.println("a");
 			String fromCity = rs.getString("FromCity");
-			System.out.println("a");
 			String toCity = rs.getString("ToCity");
 	
 			mm.add(new BookedFlightsTable(flightID, flightDate, flightTime, fromCity, toCity));
