@@ -33,7 +33,6 @@ public class BookedFlightsController implements Initializable{
 			PreparedStatement pst = conn.prepareStatement("select * from BookedFlights");
 			ResultSet rs = pst.executeQuery();
 			
-			
 			while(rs.next()){
 			String CustomerEmail = rs.getString("CustomerEmail");
 			int flightID = rs.getInt("FlightID");
