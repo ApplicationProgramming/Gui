@@ -6,21 +6,21 @@ import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 
 public class BookedFlightsTable {
-	
+
 	private int flightID;
 	private String flightDate, flightTime, fromCity, toCity;
-	
+
 	public BookedFlightsTable() {
-		
+
 	}
-	
+
 	public BookedFlightsTable(int flightID, String flightDate, String flightTime, String fromCity, String toCity) {
 		this.flightID = flightID;
 		this.flightDate = flightDate;
 		this.flightTime = flightTime;
 		this.fromCity = fromCity;
 		this.toCity = toCity;
-		
+
 	}
 
 	public int getFlightID() {
@@ -63,10 +63,4 @@ public class BookedFlightsTable {
 		this.toCity = toCity;
 	}
 
-
-	
-	
-		
 }
-
-

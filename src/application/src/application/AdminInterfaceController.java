@@ -9,14 +9,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class UserInterfaceController extends Main {
+public class AdminInterfaceController extends Main {
 
 	@FXML
 	private Button searchFlightBtn;
 
 	public void availableFlights(ActionEvent returnButton) {
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/BookFlights.FXML"));
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/AdminBookFlights.FXML"));
 			Parent root1 = (Parent) fxmlLoader.load();
 			Scene Login = new Scene(root1);
 			Stage window = (Stage) ((Node) returnButton.getSource()).getScene().getWindow();
@@ -40,7 +40,6 @@ public class UserInterfaceController extends Main {
 		}
 	}
 	
-	
 	public void logout(ActionEvent logout) {
 		try {
 			Stage stage = (Stage) ((Node) logout.getSource()).getScene().getWindow();
@@ -55,6 +54,5 @@ public class UserInterfaceController extends Main {
 
 		}
 	}
+	}
 
-
-}

@@ -24,7 +24,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-public class BookFlightsController extends Main implements Initializable, BookFlightInterface {
+public class AdminBookFlightsController extends Main implements Initializable, BookFlightInterface {
 
 	@FXML
 	private TableView<flightTable> table;
@@ -44,16 +44,15 @@ public class BookFlightsController extends Main implements Initializable, BookFl
 	@FXML private TextField filterField;
 	@FXML private TextField filterDate;
 	@FXML private TextField filterTime;
+	@FXML private TextField deleteFlightField;
 	@FXML private Label bookLbl;
-	
-	int numberOfSeatsLeft;
-	int numberOfSeatsLeftNow;
 	
 	@FXML
 	private TextField bookFlightID;
 	
 	private final ObservableList<flightTable> dataList = FXCollections.observableArrayList();
 	
+	@Override
 	public ObservableList<flightTable> getAllFlightInfo() {
 
 		
@@ -126,6 +125,7 @@ public class BookFlightsController extends Main implements Initializable, BookFl
 	}
 	
 
+	@Override
 	public void handle(ActionEvent event) {
 
 		colFlightID.setCellValueFactory(new PropertyValueFactory<flightTable, Integer>("flightID"));
@@ -137,6 +137,7 @@ public class BookFlightsController extends Main implements Initializable, BookFl
 		table.getItems().setAll(getAllFlightInfo());
 	}
 	
+	@Override
 	public boolean checkBookedTickets(String flightID) {
 		try{
 			Connection conn = DBConnector.getConnection();
@@ -158,12 +159,9 @@ public class BookFlightsController extends Main implements Initializable, BookFl
 
 	}
 	
+	@Override
 	public void bookFlight(ActionEvent event) {
-		
-		String enteredBookFlightID = bookFlightID.getText();
-		
 		try{
-			
 			Connection conn = DBConnector.getConnection();
 			PreparedStatement ps = conn.prepareStatement("Select * FROM Flight Where FlightID ='" + bookFlightID.getText() + "'");
 			ResultSet rs = ps.executeQuery();
@@ -187,9 +185,8 @@ public class BookFlightsController extends Main implements Initializable, BookFl
 				pst.setString(5, flightFromCity);
 				pst.setString(6, flightToCity);
 				pst.executeUpdate();
-				removeFlightSeat(bookFlightID.getText());
+				
 				bookLbl.setText("Flight has been Booked!");
-	
 				}
 				else 
 					bookLbl.setText("You have already Booked this flight!");
@@ -201,6 +198,7 @@ public class BookFlightsController extends Main implements Initializable, BookFl
 		
 	}
 	
+	@Override
 	public void returnButton(ActionEvent event) {
 		try {
 			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -208,7 +206,7 @@ public class BookFlightsController extends Main implements Initializable, BookFl
 			stage.close();
 			Stage login = new Stage();
 			Parent root1 = FXMLLoader.load(getClass().getResource("/application/UserInterface.fxml"));
-			Scene returnToLogin = new Scene(root1, 305, 239);
+			Scene returnToLogin = new Scene(root1, 777, 565);
 			returnToLogin.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			login.setScene(returnToLogin);
 			login.show();
@@ -216,31 +214,29 @@ public class BookFlightsController extends Main implements Initializable, BookFl
 
 		}
 	}
-
-	public void removeFlightSeat(String FlightID) {
-		try{
-			Connection conn = DBConnector.getConnection();
-			PreparedStatement ps = conn.prepareStatement("Select NumberOfPassengers FROM Flight Where FlightID ='" + FlightID + "'");
-			ResultSet rs = ps.executeQuery();
-			if (rs.next()) {
-				numberOfSeatsLeft = rs.getInt("NumberOfPassengers");
-				if (numberOfSeatsLeft > 0) {
-					PreparedStatement pst = conn.prepareStatement("Update Flight Set NumberOfPassengers = NumberOfPassengers - 1 Where FlightID = '" + FlightID + "'");	
-					pst.executeUpdate();
-				
-			}
-			}
-		} catch(Exception e) {
-			
-		}
-	}
-
+	
 	@Override
 	public void deleteFlight(ActionEvent event) {
-		// TODO Auto-generated method stub
 		
-	}
-
-
+		System.out.println("aa");
+		String enteredFlightID = deleteFlightField.getText();
 	
+		
+		try{
+			Connection conn = DBConnector.getConnection();
+			System.out.println("a");
+			PreparedStatement pst = conn.prepareStatement("DELETE FROM Flight Where FlightID = '" + enteredFlightID + "';");
+			System.out.println("b");
+			pst.executeUpdate();
+			System.out.println("c");
+		
+		
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+		
 }
+
+

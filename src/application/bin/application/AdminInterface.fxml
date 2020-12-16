@@ -6,7 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="301.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserInterfaceController">
+<AnchorPane prefHeight="301.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminInterfaceController">
    <children>
       <ToolBar layoutX="4.0" layoutY="5.0" prefHeight="40.0" prefWidth="316.0">
         <items>

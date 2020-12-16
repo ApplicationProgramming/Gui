@@ -41,7 +41,12 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="forgotPassword" layoutX="69.0" layoutY="240.0" mnemonicParsing="false" onAction="#forgotPassword" text="Forgot Password">
+      <Button fx:id="forgotPassword" layoutX="14.0" layoutY="239.0" mnemonicParsing="false" onAction="#forgotPassword" prefHeight="39.0" prefWidth="157.0" text="Forgot Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="176.0" layoutY="239.0" mnemonicParsing="false" onAction="#adminLogin" text="Admin">
          <font>
             <Font size="18.0" />
          </font>
