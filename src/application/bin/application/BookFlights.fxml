@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BookFlightsController">
+   <children>
+      <TableView fx:id="table" layoutX="65.0" layoutY="21.0" prefHeight="581.0" prefWidth="771.0">
+        <columns>
+          <TableColumn fx:id="colFlightID" prefWidth="90.0" text="FlightID" />
+          <TableColumn fx:id="colFromCity" minWidth="0.0" prefWidth="160.0" text="From " />
+            <TableColumn fx:id="colToCity" prefWidth="164.0" text="Destination" />
+            <TableColumn fx:id="colFlightDate" prefWidth="137.0" text="Flight Date" />
+            <TableColumn fx:id="colFlightTime" prefWidth="126.0" text="Flight Time" />
+            <TableColumn fx:id="colSeats" prefWidth="93.0" text="Seats Available" />
+        </columns>
+      </TableView>
+      <Button layoutX="65.0" layoutY="620.0" mnemonicParsing="false" onAction="#handle" text="Refresh Flights" />
+   </children>
+</AnchorPane>

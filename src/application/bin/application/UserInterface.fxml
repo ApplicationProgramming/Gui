@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserInterfaceController">
+   <children>
+      <ToolBar layoutX="4.0" layoutY="5.0" prefHeight="40.0" prefWidth="300.0">
+        <items>
+            <Button fx:id="searchFlightBtn" mnemonicParsing="false" onAction="#availableFlights" text="Avialable Flights" />
+          <Button mnemonicParsing="false" onAction="#bookedFlights" text="Booked Flights" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>
